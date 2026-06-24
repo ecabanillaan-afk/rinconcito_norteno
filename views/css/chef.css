@@ -1,0 +1,171 @@
+/* views/css/chef.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de los tickets de cocina */
+.tablero-cocina {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta de cada orden */
+.ticket-orden {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-top: 8px solid #e67e22; /* Color naranja de proceso */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.ticket-orden:hover {
+    transform: translateY(-5px);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.ticket-mesa {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.ticket-tiempo {
+    font-size: 0.9em;
+    background: #ffeaa7;
+    color: #d63031;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+/* Lista de platos dentro del ticket */
+.lista-platos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.item-plato {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 1.1em;
+}
+
+.plato-cantidad {
+    font-weight: bold;
+    color: #e67e22;
+    background: #fae5d3;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.plato-nombre {
+    flex-grow: 1;
+    color: #34495e;
+}
+
+/* Botón Listo / Despachar */
+.btn-despachar {
+    width: 100%;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-despachar:hover {
+    background-color: #27ae60;
+}
+/* ==========================================
+   BARRA SUPERIOR Y BOTÓN REGRESAR
+   ========================================== */
+.chef-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1e1e24; /* Un tono oscuro integrado con tu sistema */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #2d2d35;
+}
+
+.chef-topbar h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Espaciador para centrar perfectamente el título */
+.espaciador-izquierdo {
+    width: 160px; 
+}
+
+/* Estilos del Botón Volver */
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #ff9f43; /* El mismo naranja gastronómico */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 159, 67, 0.2);
+    width: 160px;
+    text-align: center;
+}
+
+.btn-regresar:hover {
+    background-color: #e68a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 159, 67, 0.4);
+}
+
+/* Ajuste responsive por si la pantalla es pequeña */
+@media (max-width: 768px) {
+    .chef-topbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .espaciador-izquierdo {
+        display: none;
+    }
+    .btn-regresar {
+        width: 100%;
+    }
+}

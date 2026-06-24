@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#dfe4ea;
+}
+
+.contenedor{
+    width:90%;
+    height:90vh;
+    margin:30px auto;
+    display:flex;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.izquierda{
+    width:50%;
+    background:#f5f5f5;
+    text-align:center;
+    padding-top:80px;
+}
+
+.izquierda img{
+    width:600px;
+}
+
+.izquierda h2{
+    margin-top:20px;
+}
+
+.izquierda p{
+    margin-top:15px;
+}
+
+.derecha{
+    width:50%;
+    /* Ruta corregida: entra directo a la carpeta img que está a su lado */
+    background-image: linear-gradient(rgba(216, 229, 243, 0.85), rgba(216, 229, 243, 0.85)), url('img/mar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:100px;
+}
+
+.derecha h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:5px;
+}
+
+input{
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    padding:15px;
+    background:#2f80ed;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1366d6;
+}

@@ -1,0 +1,121 @@
+/* views/css/orden.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #111;
+}
+
+/* Distribución en dos columnas */
+.contenedor-mesa {
+    display: flex;
+    gap: 40px;
+}
+
+.col-izquierda, .col-derecha {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Formularios y elementos de control */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Evita que se desborde del contenedor */
+}
+
+/* Botones */
+.btn-agregar {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-agregar:hover {
+    background-color: #218838;
+}
+
+.btn-cerrar {
+    width: 100%;
+    padding: 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.2s;
+}
+
+.btn-cerrar:hover {
+    background-color: #c82333;
+}
+
+/* Alerta de éxito (Check Verde) */
+.alerta-exito {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+    text-align: center;
+}
+
+/* Tabla de consumos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #555;
+}
+
+.total-seccion {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 25px;
+    color: #000;
+}

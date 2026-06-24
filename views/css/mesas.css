@@ -1,0 +1,128 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y ESTRUCTURA
+   ========================================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* REEMPLAZADO: Cambiamos el fondo claro por tu imagen MeF.png con una capa sutil encima */
+    background-image: linear-gradient(rgba(233, 234, 244, 0.5), rgba(236, 238, 248, 0.5)), url('img/MeF.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantiene el fondo fijo si llegas a tener muchas mesas y haces scroll */
+    padding-top: 20px;
+}
+
+/* BARRA SUPERIOR (Controla la alineación del botón y el título) */
+.mesas-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto 40px auto;
+}
+
+/* Título centrado gracias al equilibrio de flexbox */
+.mesas-topbar h1 {
+    font-size: 32px;
+    color: #0f172a;
+    text-align: center;
+    margin: 0;
+}
+
+/* BOTÓN REGRESAR ESTILIZADO */
+.btn-regresar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f172a; /* Azul noche a juego con tu sidebar */
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 24px;
+    border-radius: 30px; /* Bordes completamente redondeados para un look moderno */
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 200px;
+}
+
+/* Efecto interactivo al pasar el cursor */
+.btn-regresar:hover {
+    background: #1e293b;
+    transform: translateY(-2px); /* Eleva sutilmente el botón */
+    box-shadow: 0 6px 15px rgba(15, 23, 42, 0.4);
+}
+
+/* Pequeño movimiento de la flecha al hacer hover */
+.btn-regresar:hover i {
+    transform: translateX(-4px);
+    transition: transform 0.2s ease;
+}
+
+/* Bloque equilibrador */
+.espaciador-derecho {
+    width: 200px; /* Mismo ancho que el botón para mantener el título en el centro matemático */
+}
+
+/* ==========================================================================
+   CUADRÍCULA DE MESAS
+   ========================================================================== */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.mesa {
+    padding: 45px 20px;
+    text-align: center;
+    border-radius: 18px;
+    font-size: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estado LIBRE (Verde Cevichero) */
+.mesa.libre {
+    background-image: linear-gradient(rgba(34, 197, 94, 0.88), rgba(34, 197, 94, 0.88)), url('img/mesaM.png');
+}
+
+/* Estado OCUPADA (Rojo Alerta sutil) */
+.mesa.ocupada {
+    background-image: linear-gradient(rgba(239, 68, 68, 0.88), rgba(239, 68, 68, 0.88)), url('img/mesaM.png');
+}
+
+.mesa a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.mesa h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.mesa p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* Efecto flotante en las mesas */
+.mesa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+

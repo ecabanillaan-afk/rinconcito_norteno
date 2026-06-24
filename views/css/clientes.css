@@ -1,0 +1,240 @@
+/* ==========================================================================
+   ESTILOS ORIGINALES (Para tu index.php) - NO TOCAR
+   ========================================================================== */
+/* ==========================================================================
+   ESTILOS ORIGINALES (Para tu index.php)
+   ========================================================================== */
+body {
+    font-family: Arial;
+    margin: 30px;
+}
+
+/* Alineación para poner el título a la izquierda y el botón a la derecha */
+.header-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-lista h1 {
+    margin: 0; /* Quitamos el margen viejo para que se alinee perfectamente con el botón */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo exclusivo para el botón de regresar (Rojo/Gris oscuro institucional) */
+.header-lista .btn-regresar {
+    background: #475569; /* Un tono gris pizarra elegante */
+    transition: background 0.3s ease;
+}
+
+.header-lista .btn-regresar:hover {
+    background: #dc2626; /* Cambia a rojo cuando pasas el cursor por encima (Logout vibe) */
+}
+
+/* ==========================================================================
+   NUEVOS ESTILOS EXCLUSIVOS PARA REGISTRAR.PHP (Déjalos tal cual abajo)
+   ========================================================================== */
+
+/* ==========================================================================/* ==========================================================================
+   NUEVOS ESTILOS EXCLUSIVOS PARA REGISTRAR.PHP
+   ========================================================================== */
+
+body.body-registro {
+    margin: 0px !important;
+    padding: 0px !important;
+    background-color: #1e1e24 !important; 
+    color: #ffffff;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+}
+
+/* Forzamos al contenedor principal a centrarse sin importar qué ocurra alrededor */
+body.body-registro .contenedor-registro {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto !important; /* Centrado horizontal de emergencia */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body.body-registro .tarjeta-registro {
+    background-color: #2a2a32;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ... El resto de tus estilos de inputs y botones se quedan igual abajo ... */
+
+/* Encabezado */
+.encabezado-registro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado-registro h2 {
+    color: #ff9f43; /* Tono naranja/dorado gastronómico */
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.encabezado-registro p {
+    color: #a4a4b2;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Estilos del Formulario e Inputs */
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-input label {
+    font-size: 13px;
+    color: #ff9f43;
+    font-weight: 500;
+    text-align: left;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #1e1e24;
+    border: 1px solid #444452;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #ff9f43;
+    box-shadow: 0 0 8px rgba(255, 159, 67, 0.4);
+}
+
+/* Botones y Acciones dentro del registro */
+.acciones-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-guardar {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff9f43;
+    border: none;
+    border-radius: 8px;
+    color: #1e1e24;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+    background-color: #ffb366;
+}
+
+.btn-cancelar {
+    text-align: center;
+    color: #a4a4b2;
+    background: transparent; /* Quitamos el fondo azul original aquí */
+    padding: 0;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background: transparent;
+    color: #ff4d4d; 
+}
+
+/* ==========================================
+   ESTILOS PARA LA PÁGINA DE EDITAR CLIENTE
+   ========================================== */
+
+body.body-editar {
+    margin: 0px !important;
+    padding: 0px !important;
+    background-color: #1e1e24 !important; 
+    color: #ffffff;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+}
+
+/* Contenedor principal centrado */
+body.body-editar .contenedor-editar {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto !important;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta contenedora */
+body.body-editar .tarjeta-editar {
+    background-color: #2a2a32;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado */
+.encabezado-editar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado-editar h2 {
+    color: #ff9f43; /* Tono naranja gastronómico */
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.encabezado-editar p {
+    color: #a4a4b2;
+    font-size: 14px;
+    margin-top: 5px;
+}
